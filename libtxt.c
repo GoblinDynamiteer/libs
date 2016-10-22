@@ -15,6 +15,7 @@ Uppdaterat kommentarer, inga ändringar i koden
 Lade till definitioner för textformatering i header
 Namnbyte av filer till libtxt.*
 Namnbyte av macron
+Lade till fler färger för textformatering
 
 
 Information:
