@@ -14,6 +14,10 @@ Uppdaterat kommentarer, inga ändringar i koden
 2016-10-22
 Lade till definitioner för textformatering i header
 Namnbyte av filer till libtxt.*
+Namnbyte av macron
+
+
+
 
 Information:
 Filen innehåller funktioner för inläsning av text, 
