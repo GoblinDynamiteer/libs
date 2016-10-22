@@ -1,4 +1,4 @@
-#include "strings_text_v1.h"
+#include "libtxt.h"
 
 /*
 VERSION 1
@@ -11,6 +11,9 @@ Första utgåvan
 2016-10-13
 Uppdaterat kommentarer, inga ändringar i koden
 ---------------------------------------------------------
+2016-10-22
+Lade till definitioner för textformatering i header
+Namnbyte av filer till libtxt.*
 
 Information:
 Filen innehåller funktioner för inläsning av text, 
