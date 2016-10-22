@@ -1,7 +1,7 @@
 #include "libtxt.h"
 
 /*
-VERSION 1
+VERSION 3
 
 Ändringar:
 ---------------------------------------------------------
@@ -15,8 +15,6 @@ Uppdaterat kommentarer, inga ändringar i koden
 Lade till definitioner för textformatering i header
 Namnbyte av filer till libtxt.*
 Namnbyte av macron
-
-
 
 
 Information:
