@@ -175,7 +175,7 @@ int inputInt(const char a[]){
 Skriver ut texten i char-variabel a, och tar en användarinläsning till double-variabel som returneras
 
 Exempel användning:
-double variabel = inputInt("Skriv in ett decimaltal: ");
+double variabel = inputDouble("Skriv in ett decimaltal: ");
  */
 double inputDouble(const char a[]){
 	double temp;
