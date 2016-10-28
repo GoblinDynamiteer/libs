@@ -154,6 +154,8 @@ Exempel:
 printLine('-', 15);
 -->
 ---------------
+
+om _Bool r == 1 skrivs nyradstecken ut innan och efter "linjen"
 */
 void printLine(char t, int n, _Bool r){
 	if(r){
