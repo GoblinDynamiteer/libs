@@ -32,6 +32,10 @@ Uppdaterad funktion: printLine(t,n,r)
 	skriver ut n st tecken av char t
 	om bool r == 1, skriv nyradstecken före och efter linje
 
+2016-10-31
+Flyttad funktioner inputInt(a) & inputDouble(a) till bibliotek: libinput
+
+
 Information:
 Filen innehåller funktioner för inläsning av text, textfilshantering, samt
 diverse andra text-funktioner
@@ -168,30 +172,4 @@ void printLine(char t, int n, _Bool r){
 		printf("\n");
 	}
 	return;
-}
-
-/* inputInt
-Skriver ut texten i char-variabel a, och tar en användarinläsning till int-variabel som returneras
-
-Exempel användning:
-int variabel = inputInt("Skriv in ett heltal: ");
- */
-int inputInt(const char a[]){
-	int temp;
-	printf("%s", a);
-	scanf("%d", &temp);
-	return temp;
-}
-
-/* inputDouble
-Skriver ut texten i char-variabel a, och tar en användarinläsning till double-variabel som returneras
-
-Exempel användning:
-double variabel = inputDouble("Skriv in ett decimaltal: ");
- */
-double inputDouble(const char a[]){
-	double temp;
-	printf("%s", a);
-	scanf("%lf", &temp);
-	return temp;
 }
