@@ -52,8 +52,9 @@ Exempel användning:
 double variabel = inputDouble("Skriv in ett decimaltal: ");
  */
 double inputDouble(const char a[]){
-	double temp;
+	char temp[30];
 	printf("%s", a);
-	scanf("%lf", &temp);
-	return temp;
+	scanf("%s", temp);
+	return convertDecimalInput(temp);
 }
+
