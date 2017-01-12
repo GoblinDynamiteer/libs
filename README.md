@@ -16,8 +16,8 @@ Geometry, coordinates, trigonometry
 
 ---
 
-**libgeo**  
-Using SDL to test libgeo function   
+**Screenshots**  
+Using SDL to test libgeo functions  
 ![Triangle data 1](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_001.png)  
 ![Triangle data 2](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_002.png)  
 ![Triangle data 3](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_003.png)  
