@@ -121,19 +121,46 @@ bool render(test * test){
 			test->mouseY
 	);
 
+	/*	 Draw horizontal line 	*/
+	SDL_RenderDrawLine(
+			test->renderer,
+			test->originX,
+			test->originY,
+			test->mouseX,
+			test->originY
+	);
+
+	/*	 Draw vertical line 	*/
+	SDL_RenderDrawLine(
+			test->renderer,
+			test->mouseX,
+			test->originY,
+			test->mouseX,
+			test->mouseY
+	);
+
+
+	int dypos = (test->mouseY < test->originY) ?
+			test->mouseY + test->deltaY / 2 :
+			test->mouseY - test->deltaY / 2 ;
+
+	int dxpos = (test->mouseX > test->originX) ?
+			test->originX + test->deltaX / 2 :
+			test->originX - test->deltaX / 2 ;
+
 	/*	 Display text	*/
 	char displayText[80];
 	sprintf(displayText, "Distance: %.0f", test->distance);
-	drawText(test, displayText, test->mouseX, test->mouseY+20);
+	drawText(test, displayText, test->mouseX, test->mouseY-20);
 
 	sprintf(displayText, "dX: %d", test->deltaX);
-	drawText(test, displayText, test->mouseX, test->mouseY+20+FONT_SIZE);
+	drawText(test, displayText, dxpos, test->originY+10);
 
 	sprintf(displayText, "dY: %d", test->deltaY);
-	drawText(test, displayText, test->mouseX, test->mouseY+20+FONT_SIZE*2);
+	drawText(test, displayText, test->mouseX, dypos);
 
 	sprintf(displayText, "Angle: %.1f", test->angle);
-	drawText(test, displayText, test->mouseX, test->mouseY+20+FONT_SIZE*3);
+	drawText(test, displayText, test->originX, test->originY-20);
 
 	SDL_RenderPresent(test->renderer);
 	return 1;
@@ -148,7 +175,7 @@ void drawText(test * test, char * text, int x, int y){
 	textSurface = TTF_RenderText_Solid(
 		test->font, text, color
 	);
-	printf("%s\n", text);
+
 	SDL_Texture * textTexture = SDL_CreateTextureFromSurface(
 		test->renderer, textSurface
 	);
