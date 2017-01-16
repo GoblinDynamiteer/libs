@@ -30,6 +30,9 @@
 /*	 Font stuff	*/
 #define FONT_SIZE 28
 
+/*	 Line macros	*/
+#define PERPLINE_SIZE 60
+
 /* Struct for holding test info */
 typedef struct test{
 	SDL_Window * window;
@@ -47,6 +50,6 @@ typedef struct test{
 /*	 Functions	*/
 bool processEvent(test * test);
 bool render(test * test);
-void drawText(test * test, char * text, int x, int y);
+void drawText(test * test, char * text, int x, int y, SDL_Color color);
 
 #endif /* DEF_H_ */
