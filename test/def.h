@@ -24,7 +24,7 @@
 #define WIN_HEIGHT 1080
 
 /*	 Flags for window	*/
-#define WIN_FLAGS SDL_WINDOW_FULLSCREEN
+#define WIN_FLAGS 0//SDL_WINDOW_FULLSCREEN
 #define REN_FLAGS SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC
 
 /*	 Font stuff	*/
@@ -39,6 +39,7 @@ typedef struct test{
 	double distance;
 	double angle;
 	int deltaY, deltaX;
+	double lineSlope;
 	TTF_Font *font;
 }test;
 

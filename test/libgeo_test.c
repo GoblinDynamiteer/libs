@@ -99,6 +99,8 @@ bool processEvent(test * test){
 	test->deltaY = deltaY(test->originY, test->mouseY);
 	test->deltaX = deltaX(test->originX, test->mouseX);
 
+	test->lineSlope = lineSlope(test->deltaX, test->deltaY);
+
 	double angleRad =  angleArcTan(test->deltaY, test->deltaX);
 	test->angle = radToDeg(angleRad);
 
@@ -161,6 +163,9 @@ bool render(test * test){
 
 	sprintf(displayText, "Angle: %.1f", test->angle);
 	drawText(test, displayText, test->originX, test->originY-20);
+
+	sprintf(displayText, "Slope: %.1f", test->lineSlope);
+	drawText(test, displayText, 10, 10);
 
 	SDL_RenderPresent(test->renderer);
 	return 1;
