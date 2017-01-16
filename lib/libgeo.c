@@ -18,11 +18,11 @@ double calculateDistance(int x1, int x2, int y1, int y2){
 }
 
 int deltaY(int x1, int x2){
-	return fabs(x1 - x2);
+	return x1 - x2;
 }
 
 int deltaX(int y1, int y2){
-	return fabs(y1 - y2);
+	return y1 - y2;
 }
 
 /*	 Angle from opposite and adjacent sides of a triangle	*/
