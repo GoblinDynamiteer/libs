@@ -34,3 +34,7 @@ double angleArcTan(double o, double a){
 double radToDeg(double rads){
 	return rads * 180.0 / M_PI;
 }
+
+double lineSlope(double deltaX, double deltaY){
+	return deltaY / deltaX;
+}

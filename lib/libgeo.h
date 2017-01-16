@@ -15,5 +15,6 @@ int deltaY(int x1, int x2);
 int deltaX(int y1, int y2);
 double angleArcTan(double o, double a);
 double radToDeg(double rads);
+double lineSlope(double deltaX, double deltaY);
 
 #endif /* LIB_LIBGEO_H_ */
