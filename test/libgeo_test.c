@@ -161,6 +161,26 @@ bool render(test * test){
 	sprintf(displayText, "Slope: %.2f", test->lineSlope);
 	drawText(test, displayText, 10, 10);
 
+
+	/*	Calculate and draw perpendicular line	*/
+	double perpSlope = perpendLineSlope(test->lineSlope);
+
+	sprintf(displayText, "Perpendicular slope: %.2f", perpSlope);
+	drawText(test, displayText, 10, 10 + FONT_SIZE);
+
+	/*	 Staring position is middle of triangle hypotenuse	*/
+	int xStart = test->mouseX + test->deltaX / 2;
+	int yStart = test->mouseY + test->deltaY / 2;
+	double distance = 60.0f;
+
+	SDL_RenderDrawLine(
+			test->renderer,
+			lineEndCoordXpos(test->mouseX, 60, perpSlope),
+			lineEndCoordYpos(test->mouseY, 60, perpSlope),
+			lineEndCoordXneg(test->mouseX, 60, perpSlope),
+			lineEndCoordYneg(test->mouseY, 60, perpSlope)
+	);
+
 	SDL_RenderPresent(test->renderer);
 	return 1;
 }
