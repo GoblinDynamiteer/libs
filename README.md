@@ -13,7 +13,7 @@ User input, example read and convert non C decimal input 123,12 to 123.12
 
 **libgeo**  
 Geometry, coordinates, trigonometry  
-![YouTube Demo](https://www.youtube.com/watch?v=CRliam8EJOI)   
+[YouTube demo 1](https://www.youtube.com/watch?v=CRliam8EJOI)  
 
 ---
 
