@@ -38,3 +38,49 @@ double radToDeg(double rads){
 double lineSlope(double deltaX, double deltaY){
 	return deltaY / deltaX;
 }
+
+double perpendLineSlope(double slope){
+	/*	 negative reciprocal	*/
+	return -(1.0f/slope);
+}
+
+
+double perpendLineCos(double slope){
+	double c = 1.0f / (sqrt(1.0f+pow(slope,2)));
+	return c;
+
+}
+
+double perpendLineSin(double slope){
+	double s = slope / (sqrt(1.0f+pow(slope,2)));
+	return s;
+
+}
+
+
+/*	Functions determines end coordinates from X,Y starting coordinate,
+ * 	slope, and length of line.	*/
+
+int lineEndCoordXpos(int xStart, double lineLenght, double slope){
+	double c = perpendLineCos(slope);
+	int xEnd = xStart + (int)(lineLenght * c);
+	return xEnd;
+}
+
+int lineEndCoordXneg(int xStart, double lineLenght, double slope){
+	double c = perpendLineCos(slope);
+	int xEnd = xStart - (int)(lineLenght * c);
+	return xEnd;
+}
+
+int lineEndCoordYpos(int yStart, double lineLenght, double slope){
+	double s = perpendLineSin(slope);
+	int yEnd = yStart + (int)(lineLenght * s);
+	return yEnd;
+}
+
+int lineEndCoordYneg(int yStart, double lineLenght, double slope){
+	double s = perpendLineSin(slope);
+	int yEnd = yStart - (int)(lineLenght * s);
+	return yEnd;
+}
