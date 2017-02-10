@@ -27,5 +27,6 @@ node * createNode(int val);
 node * getNext(node * n);
 node * getNode(node * n, int num);
 int countItems(node * n);
+node * removeNode(node * list, node * n);
 
 #endif

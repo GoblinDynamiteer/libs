@@ -81,3 +81,25 @@ int countItems(node * n){
   }
   return c;
 }
+
+/*  Remove node from list   */
+node * removeNode(node * list, node * n){
+  node * newTop = list;
+  /*   If node to remove is the first node  */
+  if(list == n){
+    newTop = getNext(list);
+    return newTop;
+  }
+  /*  Go to node before node to remove   */
+  while(getNext(list) != n){
+    list = getNext(list);
+  }
+  /*  Skip next node   */
+  if(isEmpty(getNext(n))){
+    list->next = NULL;
+  }
+  else{
+    list->next = getNext(n);
+  }
+  return newTop;
+}
