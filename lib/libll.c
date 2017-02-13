@@ -104,3 +104,25 @@ node * removeNode(node * list, node * n){
   }
   return newTop;
 }
+
+/*  Frees node of a given linked list   */
+node * freeNodes(node * list){
+  if(isEmpty(list)){
+    return NULL;
+  }
+  if(isEmpty(getNext(list))){
+    free(list);
+    return NULL;
+  }
+  else{ //Not ideal.
+    node * next = getNext(list);
+    node * current = list;
+    free(current);
+    while(!isEmpty(getNext(next))){
+      current = next;
+      next = getNext(next);
+      free(current);
+    }
+  }
+  return NULL;
+}
