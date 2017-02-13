@@ -22,5 +22,6 @@ node * getNode(node * n, int num);
 int countItems(node * n);
 node * removeNode(node * list, node * n);
 node * freeNodes(node * list);
+void printList(node * list);
 
 #endif

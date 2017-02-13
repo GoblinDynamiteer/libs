@@ -53,7 +53,7 @@ node * createNode(int val){
 /*  Returns the next node in the list   */
 node * getNext(node * n){
   if(isEmpty(n->next)){
-    printf("Next is empty, returning NULL\n");
+    //printf("Next is empty, returning NULL\n");
     return NULL;
   }
   return n->next;
@@ -129,4 +129,13 @@ node * freeNodes(node * list){
     }
   }
   return NULL;
+}
+
+/*	Print list values	*/
+void printList(node * list){
+	int count = countItems(list);
+	for(int i = 0; i < count; i++){
+		printf("node %03d: %d\n", i+1, list->value);
+		list = getNext(list);
+	}
 }
