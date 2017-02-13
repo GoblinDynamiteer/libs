@@ -52,6 +52,10 @@ node * createNode(int val){
 
 /*  Returns the next node in the list   */
 node * getNext(node * n){
+  if(isEmpty(n->next)){
+    printf("Next is empty, returning NULL\n");
+    return NULL;
+  }
   return n->next;
 }
 
