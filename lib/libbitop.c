@@ -1,4 +1,4 @@
-/*   Binary operations
+/*   Bitwise operations
 
     Johan Kämpe */
 
