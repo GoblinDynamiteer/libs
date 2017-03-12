@@ -15,5 +15,6 @@ int checkBitAtPosition(int num, int bit);
 void printBinary(int hex);
 void printPositionMarker(int num);
 unsigned int setBitAtPosition(unsigned int num, int bit, int value);
+unsigned int toggleBitAtPosition(unsigned int num, int bit);
 
 #endif

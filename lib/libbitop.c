@@ -54,3 +54,13 @@ unsigned int setBitAtPosition(unsigned int num, int bit, int value){
   /*   Returns new number  */
   return num;
 }
+
+unsigned int toggleBitAtPosition(unsigned int num, int bit){
+  /*   ^ = XOR = Exclusive OR
+      Will toggle the bit.
+      ORIGNAL BIT     XOR     RESULT
+      0               1       1
+      1               1       0
+    */
+  return num ^ (0x0001 << bit-1);
+}
