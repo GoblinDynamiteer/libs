@@ -39,7 +39,7 @@ void printPositionMarker(int num){
 }
 
 /*  Set bit at specific position to 1/0 */
-unsigned int setBit(unsigned int num, int bit, int value){
+unsigned int setBitAtPosition(unsigned int num, int bit, int value){
   if(value){ //set bit to 1
     /*   Shift in 1 to correct bit position to set to 1
         and OR with num, the bit at postion 'bit' will be 1 */
