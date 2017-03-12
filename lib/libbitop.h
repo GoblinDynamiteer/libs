@@ -16,6 +16,7 @@
 int checkBitAtPosition(int num, int bit);
 unsigned int setBitAtPosition(unsigned int num, int bit, int value);
 unsigned int toggleBitAtPosition(unsigned int num, int bit);
+int findHighestSetBit(int num);
 
 /*	 Text output */
 void printBinaryAndBitPosition(int num, int bit);

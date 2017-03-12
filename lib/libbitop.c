@@ -74,6 +74,7 @@ unsigned int setBitAtPosition(unsigned int num, int bit, int value){
   return num;
 }
 
+/*  Toggles (1 become 0 and vice versa) bit at position 'bit'   */
 unsigned int toggleBitAtPosition(unsigned int num, int bit){
   /*   ^ = XOR = Exclusive OR
       Will toggle the bit.
@@ -82,4 +83,15 @@ unsigned int toggleBitAtPosition(unsigned int num, int bit){
       1               1       0
     */
   return num ^ (0x0001 << bit-1);
+}
+
+/*  Finds the highest set bit in a number   */
+int findHighestSetBit(int num){
+  /* First bit determines negative/positive number */
+  for(int i = NUM_BITS - 1; i > 0; i--){
+    if(checkBitAtPosition(num, i)){
+      return i;
+    }
+  }
+  return 0; //No bit set.
 }
