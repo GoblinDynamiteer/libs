@@ -50,7 +50,7 @@ Decimal: 8
 Binary: 0000 0000 0000 0000 0000 0000 0000 1100
 Bit 03:                                     #   */
 void printBinaryAndBitPosition(int num, int bit){
-  printf("Decimal: %i \nBinary:", num);
+  printf("Decimal: %i \nBinary: ", num);
   printBinary(num);
   printf("\nBit %02i: ", bit);
   printPositionMarker(bit);
