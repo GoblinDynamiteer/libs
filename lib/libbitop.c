@@ -45,6 +45,18 @@ void printPositionMarker(int num){
   printf("#");
 }
 
+/*   Output example
+Decimal: 8
+Binary: 0000 0000 0000 0000 0000 0000 0000 1100
+Bit 03:                                     #   */
+void printBinaryAndBitPosition(int num, int bit){
+  printf("Decimal: %i \nBinary:", num);
+  printBinary(num);
+  printf("\nBit %02i: ", bit);
+  printPositionMarker(bit);
+}
+
+
 /*  Set bit at specific position to 1/0 */
 unsigned int setBitAtPosition(unsigned int num, int bit, int value){
   if(value){ //set bit to 1

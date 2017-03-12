@@ -11,10 +11,16 @@
 #define NUM_BITS sizeof(int) * 8
 
 /*  Functions in libbitop.c   */
+
+/*	 Bit operations on numbers	*/
 int checkBitAtPosition(int num, int bit);
-void printBinary(int hex);
-void printPositionMarker(int num);
 unsigned int setBitAtPosition(unsigned int num, int bit, int value);
 unsigned int toggleBitAtPosition(unsigned int num, int bit);
+
+/*	 Text output */
+void printBinaryAndBitPosition(int num, int bit);
+void printBinary(int hex);
+void printPositionMarker(int num);
+
 
 #endif
