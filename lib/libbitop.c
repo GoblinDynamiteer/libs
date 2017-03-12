@@ -1,8 +1,13 @@
 /*   Bitwise operations
+    By
+    Johan Kämpe
 
-    Assues first bit from right is position 1
+    Assumes first bit from right is position 1
+    0001 0001 0001 0011<- n=1
 
-    Johan Kämpe */
+    2017-03-12
+    First version
+    */
 
 #include "libbitop.h"
 
