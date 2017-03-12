@@ -95,3 +95,13 @@ int findHighestSetBit(int num){
   }
   return 0; //No bit set.
 }
+
+/*  Finds the lowest set bit in a number   */
+int findLowestSetBit(int num){
+  for(int i = 1; i < NUM_BITS; i++){
+    if(checkBitAtPosition(num, i)){
+      return i;
+    }
+  }
+  return 0; //No bit set.
+}
