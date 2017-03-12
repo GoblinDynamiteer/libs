@@ -1,5 +1,7 @@
 /*   Bitwise operations
 
+    Assues first bit from right is position 1
+
     Johan Kämpe */
 
 #include "libbitop.h"
