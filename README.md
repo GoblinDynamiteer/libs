@@ -21,7 +21,7 @@ Linked lists
 ---
 
 **Screenshots**  
-LED Blink code for Atmega328p with libavr
+LED Blink code for Atmega328p with libavr  
 ![blink](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_001.png)  
 
 Using SDL to test libgeo functions  
