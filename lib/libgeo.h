@@ -1,9 +1,11 @@
 /*
- * libgeo.h
- *
- *  Created on: 12 jan. 2017
- *      Author: kampe
- */
+		Geometry functions
+
+		by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
+    https://github.com/GoblinDynamiteer/
+
+*/	 
 
 #ifndef LIB_LIBGEO_H_
 #define LIB_LIBGEO_H_

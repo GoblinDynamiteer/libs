@@ -1,4 +1,10 @@
-/*   Atmega328p functions */
+/*   Atmega328p function library
+
+    by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
+    https://github.com/GoblinDynamiteer/
+
+*/
 
 #include "libavr.h"
 

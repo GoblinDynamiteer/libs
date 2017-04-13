@@ -1,6 +1,6 @@
 #include "libinput.h"
 
-/* 
+/*
 VERSION 1
 
 2016-10-31
@@ -15,8 +15,8 @@ Filen innehåller funktioner för användarinmatning till variabler.
 
 
 
-/* 
-convertDecimalInput 
+/*
+convertDecimalInput
 Letar upp evnetuellt decimaltecken i teckensträng , om det hittas byts det ut till en punkt.
 Strängen konverteras till double med standardfunktionen strtod, vars retur returneras
 */
@@ -57,4 +57,3 @@ double inputDouble(const char a[]){
 	scanf("%s", temp);
 	return convertDecimalInput(temp);
 }
-

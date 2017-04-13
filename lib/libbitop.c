@@ -1,13 +1,13 @@
-/*   Bitwise operations
-    By
-    Johan KÃ¤mpe
+/*   Bitwise operations library
 
     Assumes first bit from right is position 1
     0001 0001 0001 0011<- n=1
 
-    2017-03-12
-    First version
-    */
+    by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
+    https://github.com/GoblinDynamiteer/
+
+*/
 
 #include "libbitop.h"
 

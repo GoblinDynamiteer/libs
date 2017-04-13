@@ -1,9 +1,11 @@
-/*
- * libgeo.c
- *
- *  Created on: 12 jan. 2017
- *      Author: Johan Kämpe
- */
+/*  
+		Geometry functions
+
+		by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
+    https://github.com/GoblinDynamiteer/
+
+*/
 
 #include "libgeo.h"
 

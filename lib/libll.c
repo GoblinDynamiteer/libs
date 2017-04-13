@@ -1,4 +1,10 @@
-/*   Integer linked list functions  */
+/*   Integer linked list functions 
+
+		by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
+    https://github.com/GoblinDynamiteer/
+
+*/
 
 #include "libll.h"
 
