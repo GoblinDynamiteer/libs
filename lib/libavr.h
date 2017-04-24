@@ -1,7 +1,7 @@
 /*   Atmega328p function library
 
-    by Johan Kämpe
-    https://www.linkedin.com/in/johankampe/
+    by Johan Kï¿½mpe
+    by Johan Kï¿½mp    https://www.linkedin.com/in/johankampe/
     https://github.com/GoblinDynamiteer/
 
 */
@@ -22,9 +22,11 @@ uint8_t getPortPin(uint8_t pin);
 uint8_t getPort(uint8_t pin);
 void setPin(uint8_t pin, uint8_t onOff);
 
-void SerialSend(uint8_t * data);
-void SerialSendData(uint8_t data);
+void SerialSend(char * data);
+void SerialSendNL(char * data);
+void _SerialSendData(char data);
 void SerialInit(uint8_t ubrr);
+void _SerialNewLine(void);
 
 #define sleep(x) _delay_ms(x)
 #define wait(x) _delay_ms(x)
