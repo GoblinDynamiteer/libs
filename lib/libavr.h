@@ -22,6 +22,10 @@ uint8_t getPortPin(uint8_t pin);
 uint8_t getPort(uint8_t pin);
 void setPin(uint8_t pin, uint8_t onOff);
 
+void SerialSend(uint8_t * data);
+void SerialSendData(uint8_t data);
+void SerialInit(uint8_t ubrr);
+
 #define sleep(x) _delay_ms(x)
 #define wait(x) _delay_ms(x)
 

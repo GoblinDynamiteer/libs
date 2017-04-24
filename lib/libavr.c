@@ -69,3 +69,35 @@ uint8_t getPort(uint8_t pin){
 		}
 	return '!'; //Wrong pin
 }
+
+/*
+From 328p Datasheet page 176
+Init USART with Baud rate --
+Calculate ubrr with F_CPU/16/BAUD-1
+ */
+void SerialInit(uint8_t ubrr){
+  /* From 328p Datasheet page 176  */
+  /* Set baud rate in register UBRRn */
+	UBRR0H = (uint8_t)(ubrr >> 8);
+	UBRR0L = (uint8_t)(ubrr);
+  /*  Enable reciever and transmitter   */
+  UCSR0B = (1<<RXEN0)|(1<<TXEN0);
+  /* Set frame format: 8data, 2stop bit */
+  UCSR0C = (1<<USBS0)|(3<<UCSZ00);
+}
+
+/* From 328p Datasheet page 177  */
+void SerialSendData(uint8_t data){
+  /* Wait for empty transmit buffer */
+  while ( !( UCSR0A & (1<<UDRE0)) )
+  ;
+  /* Put data into buffer, sends the data */
+  UDR0 = data;
+}
+
+/*  Send array of data to USART   */
+void SerialSend(uint8_t * data){
+  for(int i = 0; data[i] != '\0'; i++){
+    SerialSendData(data[i]);
+  }
+}
