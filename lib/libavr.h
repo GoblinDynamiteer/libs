@@ -6,10 +6,15 @@
 
 */
 
+#ifndef F_CPU
+#define F_CPU 1000000
+#endif
+
 #ifndef _LIBAVR_H
 #define _LIBAVR_H
 
 #include <avr/io.h>
+#include <util/delay.h>
 
 typedef unsigned char uint8_t;
 
