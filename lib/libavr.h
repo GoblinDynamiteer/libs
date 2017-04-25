@@ -14,7 +14,7 @@
 #define BAUD_RATE 2400
 #endif
 
-#define BAUD_VAL F_CPU/16/BAUD_RATE-1
+#define BAUD_VAL F_CPU/16/BAUD_RATE-1 //Data sheet page 173
 
 #ifndef _LIBAVR_H
 #define _LIBAVR_H

@@ -128,11 +128,11 @@ void SerialSendNL(char * data){
 
 /*	Send CRLF (new line) 	*/
 void _SerialNewLine(void){
-  while ( !( UCSR0A & (1<<UDRE0)) )
-		;
-  UDR0 = 0xD;
 	while ( !( UCSR0A & (1<<UDRE0)) )
-	;
+		;
+	UDR0 = 0xD;
+	while ( !( UCSR0A & (1<<UDRE0)) )
+		;
 	UDR0 = 0xA;
 }
 
