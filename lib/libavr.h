@@ -1,7 +1,7 @@
 /*   Atmega328p function library
 
-    by Johan Kï¿½mpe
-    by Johan Kï¿½mp    https://www.linkedin.com/in/johankampe/
+    by Johan Kämpe
+    https://www.linkedin.com/in/johankampe/
     https://github.com/GoblinDynamiteer/
 
 */
@@ -28,6 +28,21 @@ enum{INPUT, OUTPUT};
 enum{OFF, ON};
 enum{ADC0, ADC1, ADC2, ADC3, ADC4, ADC5}; //Analog pins
 
+#define sleep(x) _delay_ms(x)
+#define wait(x) _delay_ms(x)
+
+#define TIMER_PRESCALER_OFF (0b00000001)
+#define TIMER_PRESCALER_8 (0b00000010)
+#define TIMER_PRESCALER_64 (0b00000011)
+#define TIMER_PRESCALER_256 (0b00000100)
+#define TIMER_PRESCALER_1024 (0b00000101)
+
+#define GET_COUNTER0 TCNT0
+#define SET_COUNTER0 TCNT0
+
+#define GET_COUNTER1 TCNT1
+#define SET_COUNTER1 TCNT1
+
 /*  libavr.c */
 
 /*  Misc pin/port   */
@@ -49,7 +64,10 @@ uint16_t ADCRead(uint8_t ADCpin);
 int _ADCStart(void);
 void ADCInit(void);
 
-#define sleep(x) _delay_ms(x)
-#define wait(x) _delay_ms(x)
+/*  Timers */
+void timer0init(uint8_t prescaler);
+void timer1init(uint8_t prescaler);
+
+
 
 #endif
