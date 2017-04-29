@@ -27,6 +27,9 @@ Atmega328p functions:<br>
 - UART
 - Timers
 
+**libbitop**  
+Bitwise operations
+
 **blinkm**  
 BLINKM RGB LED I2C control with Atmega328p
 
