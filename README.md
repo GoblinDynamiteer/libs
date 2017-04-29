@@ -40,7 +40,7 @@ LED Blink code for Atmega328p with libavr
 ![blink](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_001.png)  
 
 I2C Scanner with libavr  
-![i2cscan](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_002.png)  
+![i2cscan](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_002.PNG)  
 
 Using SDL to test libgeo functions  
 ![Triangle data 4](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_004.png)  
