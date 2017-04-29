@@ -39,6 +39,9 @@ BLINKM RGB LED I2C control with Atmega328p
 LED Blink code for Atmega328p with libavr  
 ![blink](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_001.png)  
 
+I2C Scanner with libavr  
+![i2cscan](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libavr_002.png)  
+
 Using SDL to test libgeo functions  
 ![Triangle data 4](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_004.png)  
 ![Triangle data 2](https://raw.githubusercontent.com/GoblinDynamiteer/libs/master/img/libgeo_002.png)  
