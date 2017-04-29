@@ -1,6 +1,6 @@
 /*   Atmega328p function library
 
-    by Johan Kï¿½mpe
+    by Johan Kämpe
     https://www.linkedin.com/in/johankampe/
     https://github.com/GoblinDynamiteer/
 
@@ -15,6 +15,11 @@
 #endif
 
 #define BAUD_VAL F_CPU/16/BAUD_RATE-1 //Data sheet page 173
+
+#define SCL_FREQUENCY 100000UL //100kHz
+#define I2C_START_TRANSMITTED 0x08 //data sheet page 273
+#define I2C_SLA_W_ACK_RECIEVED 0x18 //data sheet page 273
+#define I2C_DATA_SENT_ACK_RECIEVED 0x28 //data sheet page 274
 
 #ifndef _LIBAVR_H
 #define _LIBAVR_H
@@ -68,6 +73,16 @@ void ADCInit(void);
 void timer0init(uint8_t prescaler);
 void timer1init(uint8_t prescaler);
 
+/*  I2C */
+void i2cInit(void);
+uint8_t i2cWrite(uint8_t adress);
+uint8_t i2cSendByte(uint8_t data);
+void i2cStop(void);
+uint8_t _i2cSetStartCondition(void);
+void _i2cSetStopCondition(void);
+void _i2cWaitIntFlag(void);
+uint8_t _i2cSetDeviceAdress(uint8_t a, uint8_t readWrite);
+uint8_t _i2cCheckTWSR(uint8_t status);
 
 
 #endif
