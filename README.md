@@ -19,7 +19,16 @@ Geometry, coordinates, trigonometry
 Linked lists    
 
 **libavr**  
-Atmega328p pin functions  
+Atmega328p functions:<br>
+- Set pin modes
+- Set pin output
+- ADC
+- I2C
+- UART
+- Timers
+
+**blinkm**  
+BLINKM RGB LED I2C control with Atmega328p
 
 ---
 
