@@ -14,6 +14,7 @@
 #endif
 
 #include <util/delay.h>
+#include "libavr.h" //https://github.com/GoblinDynamiteer/libs/tree/master/lib
 
 //#define BLINKM_ADDRESS 0x09
 #define BLINKM_ADDRESS 0x12
