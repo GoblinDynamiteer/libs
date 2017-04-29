@@ -118,6 +118,21 @@ void SerialSend(char * data){
   }
 }
 
+/*  Send integer as string to USART   */
+void SerialSendNum(int n, uint8_t base){
+	char string[10];
+	itoa(n, string, base);
+  for(int i = 0; string[i] != '\0'; i++){
+    _SerialSendData(string[i]);
+  }
+}
+
+/*  Send integer as string to USART with new line   */
+void SerialSendNumNL(int n, uint8_t base){
+	SerialSendNum(n, base);
+	_SerialNewLine();
+}
+
 /*  Send array of data to USART with new line   */
 void SerialSendNL(char * data){
   for(int i = 0; data[i] != '\0'; i++){
@@ -210,6 +225,20 @@ uint8_t i2cSendByte(uint8_t data){
 	return _i2cCheckTWSR(I2C_DATA_SENT_ACK_RECIEVED);
 }
 
+void i2cScanner(void){
+	uint8_t max = (0xff >> 1);
+	SerialSendNL("Scanning I2C");
+	for(int i = 1; i < max; i++){
+		if(i2cWrite(i)){
+			SerialSend("Device found at 0x");
+			SerialSendNumNL(i, 16);
+		}
+		sleep(1);
+		i2cStop();
+	}
+	SerialSendNL("Scan Done!");
+}
+
 void i2cStop(void){
 	_i2cSetStopCondition();
 }
@@ -238,7 +267,7 @@ uint8_t _i2cSetDeviceAdress(uint8_t a, uint8_t readWrite){
 	/* Load SLA_W into TWDR Register. Clear
 	TWINT bit in TWCR to start transmission of
 	address. */
-	TWDR = a + readWrite;
+	TWDR = ((a << 1) | readWrite);
 	TWCR = (1<<TWINT) | (1<<TWEN);
 	_i2cWaitIntFlag();
 	return _i2cCheckTWSR(I2C_SLA_W_ACK_RECIEVED);

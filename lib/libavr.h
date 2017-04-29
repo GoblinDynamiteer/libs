@@ -26,6 +26,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include <stdlib.h> //itoa
 
 typedef unsigned char uint8_t;
 
@@ -60,6 +61,8 @@ void togglePin(uint8_t pin);
 /*  UART Serial communication   */
 void SerialSend(char * data);
 void SerialSendNL(char * data);
+void SerialSendNum(int n, uint8_t base);
+void SerialSendNumNL(int n, uint8_t base);
 void _SerialSendData(char data);
 void SerialInit(uint8_t ubrr);
 void _SerialNewLine(void);
@@ -78,11 +81,13 @@ void i2cInit(void);
 uint8_t i2cWrite(uint8_t adress);
 uint8_t i2cSendByte(uint8_t data);
 void i2cStop(void);
+void i2cScanner(void);
 uint8_t _i2cSetStartCondition(void);
 void _i2cSetStopCondition(void);
 void _i2cWaitIntFlag(void);
 uint8_t _i2cSetDeviceAdress(uint8_t a, uint8_t readWrite);
 uint8_t _i2cCheckTWSR(uint8_t status);
+
 
 
 #endif
