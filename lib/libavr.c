@@ -145,7 +145,7 @@ uint16_t ADCRead(uint8_t ADCpin){
   return (ADC);
 }
 
-int _ADCStart(void){
+void _ADCStart(void){
   /*  Start conversion - data sheet page 249  */
   ADCSRA |= (1<<ADSC);
   /*  ADSC is set to 0 when conversion is complete  */

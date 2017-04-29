@@ -1,6 +1,6 @@
 /*   Atmega328p function library
 
-    by Johan Kämpe
+    by Johan Kï¿½mpe
     https://www.linkedin.com/in/johankampe/
     https://github.com/GoblinDynamiteer/
 
@@ -61,7 +61,7 @@ void _SerialNewLine(void);
 
 /*  Analog to digital conversion  */
 uint16_t ADCRead(uint8_t ADCpin);
-int _ADCStart(void);
+void _ADCStart(void);
 void ADCInit(void);
 
 /*  Timers */
