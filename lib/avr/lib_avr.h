@@ -6,16 +6,6 @@
 
 */
 
-#ifndef F_CPU
-#define F_CPU 1000000UL
-#endif
-
-#ifndef BAUD_RATE
-#define BAUD_RATE 2400
-#endif
-
-#define BAUD_VAL F_CPU/16/BAUD_RATE-1 //Data sheet page 173
-
 #define SCL_FREQUENCY 100000UL //100kHz
 #define I2C_START_TRANSMITTED 0x08 //data sheet page 273
 #define I2C_SLA_W_ACK_RECIEVED 0x18 //data sheet page 273
@@ -26,7 +16,6 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include <stdlib.h> //itoa
 
 typedef unsigned char uint8_t;
 
@@ -58,15 +47,6 @@ uint8_t getPort(uint8_t pin);
 void setPin(uint8_t pin, uint8_t onOff);
 void togglePin(uint8_t pin);
 
-/*  UART Serial communication   */
-void SerialSend(char * data);
-void SerialSendNL(char * data);
-void SerialSendNum(int n, uint8_t base);
-void SerialSendNumNL(int n, uint8_t base);
-void _SerialSendData(char data);
-void SerialInit(uint8_t ubrr);
-void _SerialNewLine(void);
-
 /*  Analog to digital conversion  */
 uint16_t ADCRead(uint8_t ADCpin);
 void _ADCStart(void);
@@ -87,7 +67,5 @@ void _i2cSetStopCondition(void);
 void _i2cWaitIntFlag(void);
 uint8_t _i2cSetDeviceAdress(uint8_t a, uint8_t readWrite);
 uint8_t _i2cCheckTWSR(uint8_t status);
-
-
 
 #endif
