@@ -7,7 +7,9 @@
     https://github.com/GoblinDynamiteer/
 */
 
-//#define SCL_FREQUENCY 100000UL
+#ifndef _LIBAVRI2C_H
+#define _LIBAVRI2C_H
+
 #define I2C_STATUS_START_TRANSMITTED 0x08
 #define I2C_STATUS_SLA_W_ACK_RECIEVED 0x18
 #define I2C_STATUS_DATA_SENT_ACK_RECIEVED 0x28
@@ -22,9 +24,6 @@
 
 #define I2C_WRITE 0x00
 
-#ifndef _LIBAVRI2C_H
-#define _LIBAVRI2C_H
-
 #include <avr/io.h>
 
 typedef unsigned char uint8_t;
@@ -34,6 +33,8 @@ typedef unsigned long int uint32_t;
 void I2C_Init(uint32_t f_cpu, uint32_t f_scl);
 uint8_t I2C_Write(uint8_t adress);
 uint8_t I2C_Send_Byte(uint8_t data);
+uint8_t I2C_SendData(uint8_t device_adress, uint8_t * data_buffer,
+                     uint8_t data_size);
 void I2C_STOP(void);
 
 #endif
