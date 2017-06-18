@@ -18,7 +18,7 @@ Geometry, coordinates, trigonometry
 **libll**  
 Linked lists    
 
-**libavr**  
+**avr/**  
 Atmega328p functions:<br>
 - Set pin modes
 - Set pin output
@@ -30,7 +30,7 @@ Atmega328p functions:<br>
 **libbitop**  
 Bitwise operations
 
-**blinkm**  
+**rgb/**  
 BLINKM RGB LED I2C control with Atmega328p
 
 ---
